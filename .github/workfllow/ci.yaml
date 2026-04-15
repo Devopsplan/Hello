@@ -30,9 +30,9 @@ jobs:
       - name: Generate version tag (timestamp)
         id: tag
         run: echo "value=$(date +'%Y-%m-%d-%H%M%S')" >> $GITHUB_OUTPUT
-        # VERSION=2025-12-11-143025
-        # Image name: 
-        # vishashally/hello:v1:2025-12-11-090512
+        VERSION=2025-12-11-143025
+        Image name: 
+        vishashally/hello:v1:2025-12-11-090512
 
       - name: Build and push Docker image
         run: |
