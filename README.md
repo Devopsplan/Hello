@@ -63,6 +63,36 @@ def helllo():
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 
+verify it works or not 
+
+
+create a requirement.txt
+
+content :
+flask
+
+----------------
+
+
+Create a docker file 
+
+FROM python:3.12-slim
+
+WORKDIR /app
+COPY requirements.txt
+COPY app.py .
+
+RUN pip install--no-cache-dir-r requirements.txt
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
+
+
+docker build
+docker run
+
+
 
 
 
